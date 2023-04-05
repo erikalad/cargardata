@@ -39,13 +39,19 @@ function generateExcel(formData) {
     return(
         <div className='form'>
       <div className='title'>Cargar datos</div>
-      <Form onFinish={downloadExcel}>
+
+      <Form onFinish={downloadExcel} >
+
+
+     <div className='formulario'>
       <FormItem htmlFor="dashboard" label="Dashboard" name="dashboard">
-      <Input type="text" id="dashboard"  />
+      <Input type="text" id="dashboard" className='input' />
       </FormItem> 
+      
 
+      
       <Form.Item label="Series" name="series">
-      <Select>
+      <Select className='input' >
         <Select.Option value="Demo1">Demo1</Select.Option>
         <Select.Option value="Demo2">Demo2</Select.Option>
         <Select.Option value="Demo3">Demo3</Select.Option>
@@ -53,9 +59,11 @@ function generateExcel(formData) {
         <Select.Option value="Demo5">Demo5</Select.Option>
       </Select>
     </Form.Item>
+    
 
+    
     <Form.Item label="Subseries" name="Subseries">
-      <Select>
+      <Select className='input' >
         <Select.Option value="Demo1">Demo1</Select.Option>
         <Select.Option value="Demo2">Demo2</Select.Option>
         <Select.Option value="Demo3">Demo3</Select.Option>
@@ -63,12 +71,16 @@ function generateExcel(formData) {
         <Select.Option value="Demo5">Demo5</Select.Option>
       </Select>
     </Form.Item>
+    
 
+    
       <FormItem htmlFor="texto" label="Texto:" name="texto">
-      <TextArea type="text" id="texto"  />
+      <TextArea type="text" id="texto" className='input'  />
       </FormItem>
+     </div>
 
-      <Button type="primary" htmlType="submit">Descargar Excel</Button>
+
+      <Button type="primary" htmlType="submit" className='boton'>Descargar Excel</Button>
       </Form>
       </div>
     )
