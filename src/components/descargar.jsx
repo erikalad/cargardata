@@ -4,7 +4,7 @@ import { Button, Form, Input, InputNumber, Select } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
 import TextArea from 'antd/es/input/TextArea';
 import './descargar.css'
-
+import Swal from 'sweetalert2'
 
 function generateExcel(formData) {
   const worksheet = XLSX.utils.json_to_sheet([formData]);
@@ -14,9 +14,12 @@ function generateExcel(formData) {
   return fileBuffer;
 }
 
+
+
   export default function Descargar(){
 
     function downloadExcel(values) {
+      if(values.dashboard !== undefined || values.series !== undefined || values.Subseries !== undefined || values.texto !== undefined) {
       console.log(values)
       const data = {
         Dashboard: values.dashboard,
@@ -33,6 +36,24 @@ function generateExcel(formData) {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+      
+      Swal.fire({
+        title: 'Descargando',
+        text: 'Descargando el excel',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      })
+    } else {
+      
+      Swal.fire({
+        title: 'Carga los datos',
+        text: 'Los datos quedaron incompletos',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
+    }
+
     }
 
 
@@ -77,10 +98,11 @@ function generateExcel(formData) {
       <FormItem htmlFor="texto" label="Texto:" name="texto">
       <TextArea type="text" id="texto" className='input'  />
       </FormItem>
-     </div>
+     
 
 
       <Button type="primary" htmlType="submit" className='boton'>Descargar Excel</Button>
+      </div>
       </Form>
       </div>
     )
