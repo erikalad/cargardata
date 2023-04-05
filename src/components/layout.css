@@ -14,3 +14,7 @@
   .layou{
     z-index: 1 !important;
   }
+
+  .header{
+    background-color: white;
+  }

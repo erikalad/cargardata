@@ -31,6 +31,21 @@ const Layouts = () => {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
+    <div>
+    <div style={{
+      width:150,
+      height: 28,
+      margin: 16,
+      background: 'rgb(255, 255, 255)',
+    }} ><img style={{
+      width:150,
+      height: 28,
+      margin: 0,
+      background: 'rgb(255, 255, 255)',
+    }} 
+  src={logo} 
+    
+  /></div>
     <Layout
       style={{
         minHeight: '100vh',
@@ -38,19 +53,11 @@ const Layouts = () => {
       className='layout'
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <img
-        src={logo} 
-          style={{
-            width:150,
-            height: 28,
-            margin: 16,
-            background: 'rgba(255, 255, 255, 0.2)',
-          }}  
-        />
+    
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
-        <Header />
+       
         <Content    style={{
             margin: '0 16px',
           }}>
@@ -69,6 +76,7 @@ const Layouts = () => {
         
       </Layout>
     </Layout>
+    </div>
   );
 };
 export default Layouts;
