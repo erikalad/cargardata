@@ -17,6 +17,7 @@ function generateExcel(formData) {
 
 
   export default function Descargar(){
+    
 
     function downloadExcel(values) {
       if(values.dashboard !== undefined || values.series !== undefined || values.Subseries !== undefined || values.texto !== undefined) {
@@ -32,7 +33,7 @@ function generateExcel(formData) {
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'form-data.xlsx');
+      link.setAttribute('download', 'datos.xlsx');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -42,7 +43,8 @@ function generateExcel(formData) {
         title: 'Descargando',
         text: 'Descargando el excel',
         icon: 'success',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        confirmButtonColor:'#0b0825'
       })
     } else {
       
@@ -50,7 +52,8 @@ function generateExcel(formData) {
         title: 'Carga los datos',
         text: 'Los datos quedaron incompletos',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#0b0825'
       })
     }
 

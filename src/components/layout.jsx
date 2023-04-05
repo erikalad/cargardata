@@ -57,7 +57,7 @@ const Layouts = () => {
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
-       
+  
         <Content    style={{
             margin: '0 16px',
           }}>
