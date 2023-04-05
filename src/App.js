@@ -1,13 +1,13 @@
 
 import './App.css';
-import Descargar from './components/descargar';
+import Layouts from './components/layout';
 
 
 
 function App() {
   return (
     <div className="App">
-    <Descargar/>
+    <Layouts/>
     </div>
   );
 }

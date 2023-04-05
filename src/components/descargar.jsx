@@ -59,7 +59,7 @@ function generateExcel(formData) {
 
     return(
         <div className='form'>
-      <div className='title'>Cargar datos</div>
+      {/* <div className='title'>Cargar datos</div> */}
 
       <Form onFinish={downloadExcel} >
 
