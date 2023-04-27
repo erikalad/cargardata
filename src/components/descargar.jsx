@@ -68,14 +68,14 @@ function generateExcel(formData) {
 
 
      <div className='formulario'>
-      <FormItem htmlFor="dashboard" label="Dashboard" name="dashboard">
-      <Input type="text" id="dashboard" className='input' />
+      <FormItem htmlFor="dashboard" label="Título" name="dashboard">
+      <Input type="text" id="dashboard" className='input' placeholder='Escribí el nombre' />
       </FormItem> 
       
 
       
       <Form.Item label="Series" name="series">
-      <Select className='input' >
+      <Select className='input' placeholder='Elegí la serie'>
         <Select.Option value="Demo1">Demo1</Select.Option>
         <Select.Option value="Demo2">Demo2</Select.Option>
         <Select.Option value="Demo3">Demo3</Select.Option>
@@ -87,7 +87,7 @@ function generateExcel(formData) {
 
     
     <Form.Item label="Subseries" name="Subseries">
-      <Select className='input' >
+      <Select className='input'placeholder='Elegí la subserie' >
         <Select.Option value="Demo1">Demo1</Select.Option>
         <Select.Option value="Demo2">Demo2</Select.Option>
         <Select.Option value="Demo3">Demo3</Select.Option>
@@ -99,7 +99,7 @@ function generateExcel(formData) {
 
     
       <FormItem htmlFor="texto" label="Texto:" name="texto">
-      <TextArea type="text" id="texto" className='input'  />
+      <TextArea type="text" id="texto" className='input' placeholder='Escribí el texto' />
       </FormItem>
      
 

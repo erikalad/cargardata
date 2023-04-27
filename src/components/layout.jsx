@@ -32,7 +32,7 @@ const Layouts = () => {
   } = theme.useToken();
   return (
     <div>
-    <div style={{
+ {/*    <div style={{
       width:150,
       height: 28,
       margin: 16,
@@ -45,7 +45,7 @@ const Layouts = () => {
     }} 
   src={logo} 
     
-  /></div>
+  /></div> */}
     <Layout
       style={{
         minHeight: '100vh',
